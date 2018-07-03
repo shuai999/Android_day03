@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.novate.android_day03">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- authorities：主机名，相当于一个网站的域名，可以唯一表示一个内容提供者，可以让其他软件通过这个主机名找到内容提供者-->
+        <provider
+            android:name=".simple1.AccountContentProvider"
+            android:authorities=".simple1.AccountContentProvider" android:exported="true"
+            ></provider>
+    </application>
+
+</manifest>
